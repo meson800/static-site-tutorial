@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Combinatorial assembly and design of enzymes</title>
+	<script type="text/javascript" src="https://livejs.com/live.js"></script>
+    <link rel="stylesheet" href="03_adding_styles.css">
+</head>
+<!--Main body text-->
+<body>
+    <!--Top header-->
+	<header>
+		<a href="/journal/science"><img src="https://www.science.org/pb-assets/images/logos/science-logo-1620488349680.svg"></a>
+		<div class="top-links">
+			<a href="/issue/current">Current Issue</a>
+			<a href="/archive">Archive</a>
+			<a href="/submit">Submit manuscript</a>
+		</div>
+		<a href="/subscribe">Subscribe</a>
+	</header>
+    <!--Left-hand navigation links-->
+	<div class="sidebar-nav">
+		<nav>
+			<ul>
+				<li><a href="#fishing">Fishing for the right puzzle piece</a></li>
+				<li><a href="#abstract">Abstract</a></li>
+				<li><a href="#design">Design of modular and combinable protein fragments</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="main-container">
+        <!--Breadcrumb navigation-->
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="/journal">Home</a></li>
+                <li><a href="/journal/science">Science</a></li>
+                <li><a href="/journal/science/6628">Vol. 379, No. 6628</a></li>
+                <li><a href="/journal/science/6628/enzymes">Combinatorial assembly and design of enzymes</a></li>
+            </ul>
+        </nav>
+
+        <h1>Combinatorial assembly and design of enzymes</h1>
+        <div class="authors">
+            <a href="/authors/1">R. Lipsh-Sokolik</a>,
+            <a href="/authors/2">O. Khersonsky</a>,
+            <a href="/authors/3">S. P. Schroder</a>,
+            <a href="/authors/4">C. De Boer</a>,
+            <a href="/authors/5">S. Y. Hoch</a>,
+            <a href="/authors/6">G. J. Davies</a>,
+            <a href="/authors/7">H. S. Overkleeft</a>, and
+            <a href="/authors/8">S. J. Fleishman</a>
+        </div>
+        <hr>
+        <div class="action-bar">
+            <a href="/pdf"><img width=30 src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg"></a>
+        </div>
+        <hr>
+        <div class="summary">
+            <h2 id="fishing">Fishing for the right puzzle piece</h2>
+            <p>
+                Recombination can be a good strategy to generate natural protein diversity while retaining function, but it also causes problems if the starting sequences are too dissimilar and cannot fit together properly to form a functional protein. Lipsh-Sokolik et al. developed a machine learning strategy to piece together fragments sourced from highly divergent natural enzymes to generate a million structurally diverse protein backbones. This step is then followed by mutagenesis and structural optimization to create stable, functional active sites. Isolation by high-throughput yeast display and activity-based profiling recovered thousands of functional enzyme variants. A second-generation model trained on preorganization of the active site was nearly 10-fold more efficient and provides valuable insights for enzyme design strategies across the board. —MAF
+            </p>
+        </div>
+        <div class="abstract">
+            <h2 id="abstract">Abstract</h2>
+            <p>
+                The design of structurally diverse enzymes is constrained by long-range interactions that are necessary for accurate folding. We introduce an atomistic and machine learning strategy for the combinatorial assembly and design of enzymes (CADENZ) to design fragments that combine with one another to generate diverse, low-energy structures with stable catalytic constellations. We applied CADENZ to endoxylanases and used activity-based protein profiling to recover thousands of structurally diverse enzymes. Functional designs exhibit high active-site preorganization and more stable and compact packing outside the active site. Implementing these lessons into CADENZ led to a 10-fold improved hit rate and more than 10,000 recovered enzymes. This design-test-learn loop can be applied, in principle, to any modular protein family, yielding huge diversity and general lessons on protein design principles.
+            </p>
+        </div>
+        <p>
+            Innovation in many areas of engineering relies on the combination of preexisting modular parts (1). For example, in electrical engineering, standard modular parts, such as transistors or processing units, are combined to assemble devices (2). Similarly, in a hypothetical and entirely modular protein, fragments could be combined to generate stable, well-folded, and potentially functional domains (3). However, in practice, protein domains exhibit a high density of conserved molecular interactions that are necessary for accurate native-state folding. Furthermore, mutations may be epistatic such that they can only be incorporated against the background of other mutations, severely limiting options for fragment combination (4, 5). Recombination is an important source of protein diversity in natural and laboratory evolution (6–8) and the design of de novo backbones (9); however, because of epistasis, evolution is typically restricted to recombining fragments from only a few high-homology proteins (6).
+        </p>
+        <p>
+            Despite these challenges, immune system antibodies present a notable example in which modularity enables extremely rapid and effective innovation through the combination of a small set of genetic fragments [V, (D), and J genes] (10). The result of this process is an enormous diversity of binding proteins that can, in principle, counter any pathogen. Nature has no equivalent strategy to generate structural and functional diversity in enzymes, but some protein folds, such as TIM barrels, β propellers, and repeat proteins, have evolved through the duplication, recombination, and mutation of modular fragments and are therefore prominent candidates for fragment combination. Moreover, these folds constitute some of the most structurally and functionally versatile enzymes and binding proteins in nature (11).
+        </p>
+
+        <h2 id="design">Design of modular and combinable protein fragments</h2>
+        <p>
+            For a protein fold to be a candidate for modular assembly and design, its secondary-structure elements should be conserved among homologs, but loop regions should exhibit diverse conformations, including insertions and deletions (17–19). In such cases, the secondary-structure elements typically provide robustness, whereas the loop regions encode functional differences. The TIM-barrel fold is a prime example of such modularity in which eight β/α segments comprise an inner β barrel surrounded by α helices (20, 21). The catalytic pocket is located at the top of the barrel with critical contributions from all β/α loops. Evolutionary analysis indicates that TIM-barrel proteins arose through dual duplication of an ancestral β/α–β/α segment, suggesting that modern TIM-barrel enzymes can be segmented into four parts (Fig. 1A) (22–24). Nevertheless, during evolution, each protein accumulated mutations to adapt their intersegment interactions for specific functional and stability requirements. Therefore, recombining fragments from existing proteins mostly produces unstable and dysfunctional proteins that require further mutational optimization to become stable and active (25). To address this problem, the CADENZ design objective is to compute a spanning set of backbone fragments that produce folded and active proteins when freely combined and without requiring further optimization. The primary challenge CADENZ addresses is designing mutually compatible (modular) fragments among which epistasis is minimal.
+        </p>
+	</div>
+</body>
+</html>

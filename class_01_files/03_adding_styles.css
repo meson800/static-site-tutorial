@@ -1,0 +1,119 @@
+/* Suggested from
+ * https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#playing_with_box_models
+ */
+
+/* || Base styles */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* || Layout */
+body {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        "none header"
+        "sidebar content";
+}
+
+body > header {
+    grid-area: header;
+}
+
+.sidebar-nav {
+    grid-area: sidebar;
+}
+
+.main-container {
+    grid-area: content;
+}
+
+/* || Element styles */
+
+a {
+    text-decoration: none;
+    color: #494949;
+}
+
+a:hover {
+    text-decoration:underline;
+    color: #ca2015;
+}
+
+.summary, .abstract {
+    background-color: #f6f6f6;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+.main-container {
+    max-width: 800px;
+    line-height: 140%;
+}
+
+/* || Header element styling */
+
+header {
+    display: flex;
+    max-width: 800px;
+    align-items: center;
+    box-shadow: 0px 10px 4px -4px #eaeaea;
+}
+
+.top-links {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-links a {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* || Navigation element styling */
+
+.breadcrumb ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.breadcrumb ul li {
+    margin-left: 0.5em;
+}
+
+.breadcrumb ul li:not(:first-child)::before {
+    content: ">";
+    margin-right: 0.5em;
+}
+
+.sidebar-nav nav {
+    margin-right: 1em;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+.sidebar-nav ul li {
+    margin-top: 1em;
+}
+
+/* || Other element style */
+.action-bar {
+    display: flex;
+    justify-content: end;
+    margin-left: 1em;
+    margin-right: 1em;
+}
